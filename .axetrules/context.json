@@ -1,0 +1,347 @@
+{
+  "project_info": {
+    "name": "mall",
+    "group_id": "com.macro.mall",
+    "artifact_id": "mall",
+    "version": "1.0-SNAPSHOT",
+    "last_discovery": "2026-04-29T10:08:44+02:00",
+    "evidence_file": "pom.xml"
+  },
+  "stack": {
+    "language": {
+      "name": "Java",
+      "version": "8",
+      "evidence_file": "pom.xml",
+      "evidence_snippet": "<java.version>1.8</java.version>"
+    },
+    "framework": {
+      "name": "Spring Boot",
+      "version": "2.7.5",
+      "evidence_file": "pom.xml",
+      "evidence_snippet": "<artifactId>spring-boot-starter-parent</artifactId> ... <version>2.7.5</version>"
+    },
+    "build_tool": {
+      "name": "Maven",
+      "evidence_file": "pom.xml"
+    },
+    "modules": [
+      {
+        "name": "mall-common",
+        "type": "maven-module",
+        "evidence_file": "pom.xml"
+      },
+      {
+        "name": "mall-mbg",
+        "type": "maven-module",
+        "evidence_file": "pom.xml"
+      },
+      {
+        "name": "mall-security",
+        "type": "maven-module",
+        "evidence_file": "pom.xml"
+      },
+      {
+        "name": "mall-demo",
+        "type": "maven-module",
+        "evidence_file": "pom.xml"
+      },
+      {
+        "name": "mall-admin",
+        "type": "spring-boot-app",
+        "evidence_file": "pom.xml"
+      },
+      {
+        "name": "mall-search",
+        "type": "spring-boot-app",
+        "evidence_file": "pom.xml"
+      },
+      {
+        "name": "mall-portal",
+        "type": "spring-boot-app",
+        "evidence_file": "pom.xml"
+      }
+    ],
+    "key_dependencies": [
+      {
+        "name": "MyBatis",
+        "version": "3.5.10",
+        "evidence_file": "pom.xml",
+        "evidence_key": "mybatis.version"
+      },
+      {
+        "name": "MySQL Connector/J",
+        "version": "8.0.29",
+        "evidence_file": "pom.xml",
+        "evidence_key": "mysql-connector.version"
+      },
+      {
+        "name": "JWT (jjwt)",
+        "version": "0.9.1",
+        "evidence_file": "pom.xml",
+        "evidence_key": "jjwt.version"
+      },
+      {
+        "name": "Swagger (Springfox)",
+        "version": "3.0.0",
+        "evidence_file": "pom.xml",
+        "evidence_key": "springfox-swagger.version"
+      },
+      {
+        "name": "Druid",
+        "version": "1.2.14",
+        "evidence_file": "pom.xml",
+        "evidence_key": "druid.version"
+      },
+      {
+        "name": "Hutool",
+        "version": "5.8.9",
+        "evidence_file": "pom.xml",
+        "evidence_key": "hutool.version"
+      },
+      {
+        "name": "MinIO",
+        "version": "8.4.5",
+        "evidence_file": "pom.xml",
+        "evidence_key": "minio.version"
+      },
+      {
+        "name": "Logstash Logback Encoder",
+        "version": "7.2",
+        "evidence_file": "pom.xml",
+        "evidence_key": "logstash-logback.version"
+      }
+    ]
+  },
+  "infrastructure": {
+    "containers": {
+      "name": "Docker Compose",
+      "version": "3",
+      "evidence_file": "document/docker/docker-compose-env.yml",
+      "evidence_snippet": "version: '3'"
+    },
+    "services": [
+      {
+        "name": "mysql",
+        "technology": "MySQL",
+        "version": "5.7",
+        "evidence_file": "document/docker/docker-compose-env.yml",
+        "evidence_snippet": "image: mysql:5.7"
+      },
+      {
+        "name": "redis",
+        "technology": "Redis",
+        "version": "7",
+        "evidence_file": "document/docker/docker-compose-env.yml",
+        "evidence_snippet": "image: redis:7"
+      },
+      {
+        "name": "nginx",
+        "technology": "Nginx",
+        "version": "1.22",
+        "evidence_file": "document/docker/docker-compose-env.yml",
+        "evidence_snippet": "image: nginx:1.22"
+      },
+      {
+        "name": "rabbitmq",
+        "technology": "RabbitMQ",
+        "version": "3.9.11-management",
+        "evidence_file": "document/docker/docker-compose-env.yml",
+        "evidence_snippet": "image: rabbitmq:3.9.11-management"
+      },
+      {
+        "name": "elasticsearch",
+        "technology": "Elasticsearch",
+        "version": "7.17.3",
+        "evidence_file": "document/docker/docker-compose-env.yml",
+        "evidence_snippet": "image: elasticsearch:7.17.3"
+      },
+      {
+        "name": "logstash",
+        "technology": "Logstash",
+        "version": "7.17.3",
+        "evidence_file": "document/docker/docker-compose-env.yml",
+        "evidence_snippet": "image: logstash:7.17.3"
+      },
+      {
+        "name": "kibana",
+        "technology": "Kibana",
+        "version": "7.17.3",
+        "evidence_file": "document/docker/docker-compose-env.yml",
+        "evidence_snippet": "image: kibana:7.17.3"
+      },
+      {
+        "name": "mongo",
+        "technology": "MongoDB",
+        "version": "4",
+        "evidence_file": "document/docker/docker-compose-env.yml",
+        "evidence_snippet": "image: mongo:4"
+      },
+      {
+        "name": "minio",
+        "technology": "MinIO",
+        "version": "latest",
+        "evidence_file": "document/docker/docker-compose-env.yml",
+        "evidence_snippet": "image: minio/minio"
+      }
+    ]
+  },
+  "surface_area": {
+    "persistence": [
+      {
+        "type": "SQL",
+        "technology": "MySQL",
+        "version": "5.7",
+        "evidence_file": "document/docker/docker-compose-env.yml"
+      },
+      {
+        "type": "NoSQL",
+        "technology": "MongoDB",
+        "version": "4",
+        "evidence_file": "document/docker/docker-compose-env.yml"
+      }
+    ],
+    "orm_or_mapper": [
+      {
+        "technology": "MyBatis",
+        "evidence_file": "mall-admin/src/main/resources/application.yml",
+        "evidence_snippet": "mybatis: mapper-locations:"
+      }
+    ],
+    "communications": [
+      {
+        "type": "REST",
+        "evidence_file": "document/postman/mall-admin.postman_collection.json",
+        "confidence": "inferred_from_presence_of_postman_collection"
+      },
+      {
+        "type": "REST",
+        "evidence_file": "document/postman/mall-portal.postman_collection.json",
+        "confidence": "inferred_from_presence_of_postman_collection"
+      }
+    ],
+    "messaging": [
+      {
+        "technology": "RabbitMQ",
+        "version": "3.9.11-management",
+        "evidence_file": "document/docker/docker-compose-env.yml"
+      }
+    ],
+    "cache": [
+      {
+        "technology": "Redis",
+        "version": "7",
+        "evidence_file": "document/docker/docker-compose-env.yml"
+      }
+    ],
+    "search": [
+      {
+        "technology": "Elasticsearch",
+        "version": "7.17.3",
+        "evidence_file": "document/docker/docker-compose-env.yml"
+      }
+    ],
+    "observability": [
+      {
+        "technology": "Spring Boot Actuator",
+        "evidence_file": "pom.xml",
+        "evidence_snippet": "spring-boot-starter-actuator"
+      },
+      {
+        "technology": "ELK",
+        "components": [
+          "Elasticsearch",
+          "Logstash",
+          "Kibana"
+        ],
+        "evidence_file": "document/docker/docker-compose-env.yml"
+      }
+    ],
+    "object_storage": [
+      {
+        "technology": "Aliyun OSS",
+        "evidence_file": "pom.xml",
+        "evidence_key": "aliyun-oss.version"
+      },
+      {
+        "technology": "MinIO",
+        "evidence_file": "pom.xml",
+        "evidence_key": "minio.version"
+      }
+    ]
+  },
+  "conventions": {
+    "architecture": {
+      "value": "Multi-module Maven (Spring Boot apps + shared libraries)",
+      "evidence_file": "pom.xml"
+    },
+    "config_profiles": {
+      "value": "Spring profiles (dev/prod)",
+      "evidence_file": "mall-admin/src/main/resources/application.yml",
+      "evidence_snippet": "spring.profiles.active: dev"
+    },
+    "mybatis_mapper_locations": {
+      "value": [
+        "classpath:dao/*.xml",
+        "classpath*:com/**/mapper/*.xml"
+      ],
+      "evidence_file": "mall-admin/src/main/resources/application.yml"
+    }
+  },
+  "security": {
+    "auth_type": {
+      "value": "JWT",
+      "evidence_file": "mall-admin/src/main/resources/application.yml",
+      "evidence_snippet": "jwt:"
+    },
+    "jwt_config": {
+      "tokenHeader": "Authorization",
+      "secret": "REDACTED_SECRET",
+      "expiration": 604800,
+      "tokenHead": "Bearer ",
+      "evidence_file": "mall-admin/src/main/resources/application.yml"
+    },
+    "ignored_urls_whitelist_present": {
+      "value": true,
+      "evidence_file": "mall-admin/src/main/resources/application.yml",
+      "evidence_snippet": "secure.ignored.urls"
+    },
+    "secrets_redacted": true,
+    "redacted_keys": [
+      {
+        "key": "jwt.secret",
+        "evidence_file": "mall-admin/src/main/resources/application.yml"
+      },
+      {
+        "key": "aliyun.oss.accessKeyId",
+        "evidence_file": "mall-admin/src/main/resources/application.yml"
+      },
+      {
+        "key": "aliyun.oss.accessKeySecret",
+        "evidence_file": "mall-admin/src/main/resources/application.yml"
+      },
+      {
+        "key": "docker.host",
+        "evidence_file": "pom.xml",
+        "note": "not a secret, but environment-specific; retained as-is in pom, not copied into security"
+      },
+      {
+        "key": "services.mysql.environment.MYSQL_ROOT_PASSWORD",
+        "evidence_file": "document/docker/docker-compose-env.yml"
+      },
+      {
+        "key": "services.minio.environment.MINIO_ROOT_USER",
+        "evidence_file": "document/docker/docker-compose-env.yml"
+      },
+      {
+        "key": "services.minio.environment.MINIO_ROOT_PASSWORD",
+        "evidence_file": "document/docker/docker-compose-env.yml"
+      }
+    ]
+  },
+  "quality_gates": {
+    "GATE_1_Evidence": true,
+    "GATE_2_No_Secrets": true,
+    "GATE_3_Version_Pinning": true,
+    "GATE_4_Schema_Validity": true
+  }
+}

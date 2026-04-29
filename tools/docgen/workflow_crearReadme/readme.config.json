@@ -1,0 +1,22 @@
+{
+  "nombreMicro": "spring-petclinic",
+  "descMicro": "Microservicio Spring Boot de ejemplo (Petclinic). Sustituye este texto por la descripción real.",
+  "urlRepo": "https://github.com/spring-projects/spring-petclinic",
+  "appName": "spring-petclinic",
+  "appModuleId": "spring-petclinic",
+  "nombreJar": "spring-petclinic-0.0.1-SNAPSHOT",
+  "externalHostname": "localhost:8080",
+  "buildCommand": "gradlew clean build",
+  "runCommand": "java -jar build/libs/spring-petclinic-0.0.1-SNAPSHOT.jar",
+  "swaggerUrl": "XXX/spring-petclinic/swagger-ui/index.html",
+  "maxCpu": "1",
+  "minCpu": "100",
+  "maxMem": "1024",
+  "minMem": "512",
+  "includeKudu": false,
+  "includeSolr": false,
+  "kuduKeytab": "",
+  "modeloDatosPath": ".axetrules/generated/modelo-datos.md",
+  "templatePath": "tools/docgen/workflow_crearReadme/readme.template.md",
+  "outReadmePath": "README.generated.md"
+}

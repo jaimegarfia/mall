@@ -1,0 +1,66 @@
+﻿[
+    {
+        "id":  "/api/v1/products",
+        "url":  "http://localhost:8080/api/v1/products",
+        "http_code":  200,
+        "time_total":  0.24603,
+        "attempt":  1,
+        "body":  "[{\"id\":2,\"name\":\"Keyboard\",\"description\":\"Mechanical keyboard\",\"price\":99.90,\"stock\":10}]"
+    },
+    {
+        "id":  "/api/v1/products/1",
+        "url":  "http://localhost:8080/api/v1/products/1",
+        "http_code":  404,
+        "time_total":  0.026029,
+        "attempt":  1,
+        "body":  "{\"timestamp\":\"2026-04-28T09:35:47.936+00:00\",\"status\":404,\"error\":\"Not Found\",\"path\":\"/api/v1/products/1\"}"
+    },
+    {
+        "id":  "/api/v1/categories",
+        "url":  "http://localhost:8080/api/v1/categories",
+        "http_code":  200,
+        "time_total":  0.012658,
+        "attempt":  1,
+        "body":  "[]"
+    },
+    {
+        "id":  "/api/v1/categories/1",
+        "url":  "http://localhost:8080/api/v1/categories/1",
+        "http_code":  404,
+        "time_total":  0.010622,
+        "attempt":  1,
+        "body":  "{\"timestamp\":\"2026-04-28T09:35:48.023+00:00\",\"status\":404,\"error\":\"Not Found\",\"path\":\"/api/v1/categories/1\"}"
+    },
+    {
+        "id":  "/api/v1/brands",
+        "url":  "http://localhost:8080/api/v1/brands",
+        "http_code":  200,
+        "time_total":  0.014361,
+        "attempt":  1,
+        "body":  "[]"
+    },
+    {
+        "id":  "/api/v1/brands/1",
+        "url":  "http://localhost:8080/api/v1/brands/1",
+        "http_code":  404,
+        "time_total":  0.01207,
+        "attempt":  1,
+        "body":  "{\"timestamp\":\"2026-04-28T09:35:48.115+00:00\",\"status\":404,\"error\":\"Not Found\",\"path\":\"/api/v1/brands/1\"}"
+    },
+    {
+        "id":  "/api/v1/attributes",
+        "url":  "http://localhost:8080/api/v1/attributes",
+        "http_code":  200,
+        "time_total":  0.014595,
+        "attempt":  1,
+        "body":  "[]"
+    },
+    {
+        "id":  "/api/v1/attributes/1",
+        "url":  "http://localhost:8080/api/v1/attributes/1",
+        "http_code":  404,
+        "time_total":  0.009508,
+        "attempt":  1,
+        "body":  "{\"timestamp\":\"2026-04-28T09:35:48.208+00:00\",\"status\":404,\"error\":\"Not Found\",\"path\":\"/api/v1/attributes/1\"}"
+    }
+]
